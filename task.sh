@@ -19,32 +19,32 @@ do
         read -p 'please enter email : ' email
         read -p 'please enter phone number : ' phoneNumber
         echo $fName , $LName , $email , $phoneNumber >> DB.txt
-        read -p 'if you want to return to the main manu press m , press q to quit : ' choice
+        read -p 'if you want to return to the main menu press m , press q to quit : ' choice
     fi
     if [ $input = 'v' ] || [ $input = 'V' ]
     then
         cat DB.txt
-        read -p 'if you want to return to the main manu press m , press q to quit : ' choice
+        read -p 'if you want to return to the main menu press m , press q to quit : ' choice
         
     fi
     if [ $input = 's' ] || [ $input = 'S' ]
     then
         read -p 'please enter your search : ' wToFind
         grep $wToFind DB.txt
-        read -p 'if you want to return to the main manu press m , press q to quit : ' choice
+        read -p 'if you want to return to the main menu press m , press q to quit : ' choice
         
     fi
     if [ $input = 'e' ] || [ $input = 'E' ]
     then
         >DB.txt
-        read -p 'if you want to return to the main manu press m , press q to quit : ' choice
+        read -p 'if you want to return to the main menu press m , press q to quit : ' choice
         
     fi
     if [ $input = 'd' ] || [ $input = 'D' ]
     then
         read -p ' please enter what you want to delete : ' toBeDeleted
         grep -v $toBeDeleted DB.txt  > tmpfile && mv tmpfile DB.txt   
-        read -p 'if you want to return to the main manu press m , press q to quit : ' choice
+        read -p 'if you want to return to the main menu press m , press q to quit : ' choice
         
     fi
     if [ $input = 'q' ] || [ $input = 'q' ]
